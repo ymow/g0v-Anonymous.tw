@@ -1,0 +1,16 @@
+ 
+    <com.Anonymous.tw.CustomText
+ xmlns:android="http://schemas.android.com/apk/res/android"
+ 
+        android:fontFamily="slim.ttc"
+       android:id="@+id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:textColor="@color/white"
+    android:padding="5sp"
+    android:textSize="18sp"
+    android:maxLines="1"
+    android:maxLength="40" 
+    android:lineSpacingMultiplier="1.5" />
+
+ 

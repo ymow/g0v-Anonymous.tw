@@ -1,0 +1,22 @@
+<resources>
+<!-- FONT FAIIMLY FOR Project -->
+ <declare-styleable name="customfont"> 
+     <attr name="android:fontFamily"/> 
+     <attr name="android:textStyle"/> 
+ </declare-styleable>
+ 
+ 
+ 	<string name="app_name">Anonymous</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="menu_settings">Settings</string>
+        <string name="menu_add">新增</string>
+        <string name="menu_share">分享</string>        
+    <string name="title_activity_main">Anonymous</string>
+  <!--    <string name="app_id">442218349229015</string> 
+   -->
+	<string name="namelabel">"Name : "</string>
+	<string name="TitlePeople">"Anonymous"</string>
+	<string name="termstxt">服務條款</string>
+
+	<string name="privacy">"Anonymous"</string>
+</resources>

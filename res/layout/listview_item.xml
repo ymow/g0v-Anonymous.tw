@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:textColor="@color/white"
+    android:padding="6sp"
+    android:textSize="24sp"
+    android:maxLines="1"
+    android:maxLength="40" 
+    android:lineSpacingMultiplier="5">
+
+</TextView>
+ 
+  <!--    
+  <?xml version="1.0" encoding="utf-8"?>
+
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/text"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+     android:textColor="#919191"
+    android:padding="5sp"
+    android:textSize="24sp"
+    android:maxLines="1"
+    android:maxLength="40" 
+    android:lineSpacingMultiplier="1.5">
+
+</TextView> 
+ -->
