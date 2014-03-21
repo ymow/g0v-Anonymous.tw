@@ -20,13 +20,17 @@ import android.widget.TextView;
 import com.flurry.android.FlurryAgent;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.parse.GetCallback;
+import com.parse.ParseException;
+import com.parse.ParseObject;
+import com.parse.ParseQuery;
  
  
 public class SingleItemView extends Activity {
 	private static final String  BrowserBug = null;
 	// Declare Variables
  
-      String UserName,TitleName,Content;
+      String UserName,TitleName,Content,PlusAdd;
  
 	  private ShareActionProvider mShareActionProvider;
  
@@ -35,16 +39,15 @@ public class SingleItemView extends Activity {
 		super.onCreate(savedInstanceState);
 		// Get the view from singleitemview.xml
 		setContentView(R.layout.singleitemview);
+		Intent i = getIntent();
 		  // get action bar   
         ActionBar actionBar = getActionBar();
 		 getActionBar().setDisplayHomeAsUpEnabled(true);
 		 getActionBar().setDisplayUseLogoEnabled(true);
- 
-
 	    
 		// Retrieve data from MainActivity on item click event
-		Intent i = getIntent();
-//		Intent k = getIntent();
+
+ 
 			
 		// Get the name
 		TitleName = i.getStringExtra("TitleName");
@@ -122,10 +125,13 @@ public class SingleItemView extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 	     switch (item.getItemId()) {
+	     
+         
 	        case android.R.id.home:
-	            this.finish();
-//	            startActivity(new Intent(SingleItemView.this,MainActivity.class));
+	        	startActivity(new Intent(SingleItemView.this,MainActivity.class));
 	            
+	        	this.finish();
+	           
 	            return true;
 	        default:
 	            return super.onOptionsItemSelected(item);

@@ -307,22 +307,23 @@ containing a value of this type.
     public static final class id {
         public static final int AnonymousContent=0x7f060006;
         public static final int AnonymousTitle=0x7f060005;
-        public static final int Content=0x7f06000d;
+        public static final int Content=0x7f06000e;
         public static final int Editor=0x7f060007;
         public static final int TitleName=0x7f06000c;
         public static final int UserName=0x7f06000b;
         public static final int hybrid=0x7f060004;
-        public static final int imageView1=0x7f06000e;
+        public static final int imageView1=0x7f06000f;
         public static final int listview=0x7f06000a;
         public static final int mainLayout=0x7f060009;
-        public static final int menu_add=0x7f06000f;
-        public static final int menu_next=0x7f060010;
-        public static final int menu_share=0x7f060011;
+        public static final int menu_add=0x7f060010;
+        public static final int menu_next=0x7f060011;
+        public static final int menu_share=0x7f060012;
         public static final int none=0x7f060000;
         public static final int normal=0x7f060001;
         public static final int satellite=0x7f060002;
         public static final int terrain=0x7f060003;
         public static final int text=0x7f060008;
+        public static final int textAreaScroller=0x7f06000d;
     }
     public static final class integer {
         public static final int google_play_services_version=0x7f080000;

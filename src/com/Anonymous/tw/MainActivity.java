@@ -159,7 +159,7 @@ public class MainActivity extends Activity {
 					
 					adapter.add(i+"."+(String) Rank.get("TitleName"));
 				 Log.d("TradeinServices",(String) Rank.get("TitleName"));
-				 
+					FlurryAgent.logEvent("MainRefresh");
 				//GirlList.add((String) AVgirl.get("GirlName"));
 				}
 			 
@@ -189,18 +189,19 @@ public class MainActivity extends Activity {
 						FlurryAgent.logEvent("ListView Click");
 						ParseObject Object = ob.get(position);
 						String PlusAdd = Object.getObjectId();
-	
+						i.putExtra("getObjectId", PlusAdd.toString());
 				        ParseQuery<ParseObject> query = ParseQuery.getQuery("TradeinServices");
 				        query.getInBackground(PlusAdd, new GetCallback<ParseObject>() {
 				          public void done(ParseObject object, ParseException e) {
 				            if (e == null) {
-
+				            	
 				             int s = object.getInt("ClickNumber");
 				             System.out.println("ClickNumber = " + s + "+1");
-					 
-				             
+				            s = s + 1;
+				             System.out.println("ClickNumber = " + s  );
 								adapter. notifyDataSetChanged();
-				             object.put("ClickNumber",  s+1);
+					            object.put("ClickNumber",  s);
+					             
 				             object.saveInBackground();
 				             
 				            } else {

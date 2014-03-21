@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.flurry.android.FlurryAgent;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
 
@@ -19,6 +20,19 @@ public class addnewone extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.addnewone);
 	
+	}
+	@Override
+	protected void onStart()
+	{
+		super.onStart();
+		FlurryAgent.onStartSession(this, "Q7W68BY9D995ZWS4WT6F");
+	}
+	 
+	@Override
+	protected void onStop()
+	{
+		super.onStop();		
+		FlurryAgent.onEndSession(this);
 	}
 	  @Override
 	    public boolean onCreateOptionsMenu(Menu menu) {
@@ -63,12 +77,25 @@ public class addnewone extends Activity {
 						it.saveInBackground();
 						query.orderByDescending("ClickNumber");
 						Toast.makeText(addnewone.this, "新增成功",Toast.LENGTH_SHORT).show();
-					
-			        	  Intent intent = new Intent(this, MainActivity.class);
-//			        	  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-			        	  startActivity(intent);
-			        	 this.finish();
-	            		}
+						FlurryAgent.logEvent("addnewoneFinish");
+						   new Thread(new Runnable() {
+				               @Override
+				               public void run() {
+				                   try {
+				                       Thread.sleep(100000);
+				                   }
+				                   catch (Exception e) { }
+				                   System.exit(0);
+				               }
+				           }).start();
+						   Intent intent = new Intent(this, MainActivity.class);
+//				        	  intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+				        	  startActivity(intent);
+//				        	 this.finish();
+				   } 
+					   
+			        	 
+	            		
 
 	        	  return true;
 	 //         case R.id.menu_settings:
