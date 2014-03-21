@@ -197,7 +197,7 @@ public class MainActivity extends Activity {
 				            	
 				             int s = object.getInt("ClickNumber");
 				             System.out.println("ClickNumber = " + s + "+1");
-				            s = s + 1;
+				             s = s + 1;
 				             System.out.println("ClickNumber = " + s  );
 								adapter. notifyDataSetChanged();
 					            object.put("ClickNumber",  s);
