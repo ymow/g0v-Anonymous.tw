@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
 			protected Void doInBackground(Void... params) {
 				// Locate the class table named "Country" in Parse.com
 				ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
-						"TradeinServices");
+						"test");
 				//add new 
 //				ParseObject Restaurant = new ParseObject("EatSomething");
 //				addGirl.put("GirlName", "XXX");
@@ -190,7 +190,7 @@ public class MainActivity extends Activity {
 						ParseObject Object = ob.get(position);
 						String PlusAdd = Object.getObjectId();
 						i.putExtra("getObjectId", PlusAdd.toString());
-				        ParseQuery<ParseObject> query = ParseQuery.getQuery("TradeinServices");
+				        ParseQuery<ParseObject> query = ParseQuery.getQuery("test");
 				        query.getInBackground(PlusAdd, new GetCallback<ParseObject>() {
 				          public void done(ParseObject object, ParseException e) {
 				            if (e == null) {
@@ -199,7 +199,7 @@ public class MainActivity extends Activity {
 				             System.out.println("ClickNumber = " + s + "+1");
 				             s = s + 1;
 				             System.out.println("ClickNumber = " + s  );
-								adapter. notifyDataSetChanged();
+//								adapter. notifyDataSetChanged();
 					            object.put("ClickNumber",  s);
 					             
 				             object.saveInBackground();

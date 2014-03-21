@@ -65,10 +65,10 @@ public class addnewone extends Activity {
 	            	}
 	            		else{
 	            			ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
-	    							"TradeinServices");
+	    							"test");
 	            		System.out.println(TitleName); 
 	            		System.out.println(Content);
-	            		ParseObject it = new ParseObject("TradeinServices");
+	            		ParseObject it = new ParseObject("test");
 	            		it.put("TitleName", TitleName.getText().toString());
 						it.put("Content", Content.getText().toString());
 						
@@ -82,7 +82,7 @@ public class addnewone extends Activity {
 				               @Override
 				               public void run() {
 				                   try {
-				                       Thread.sleep(100000);
+				                       Thread.sleep(10000000);
 				                   }
 				                   catch (Exception e) { }
 				                   System.exit(0);
