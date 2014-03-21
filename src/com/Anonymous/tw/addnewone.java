@@ -62,8 +62,11 @@ public class addnewone extends Activity {
 	            	if("".equals(TitleName.getText().toString()) || "".equals(Content.getText().toString())){
 	            		Log.d("d","不能空白");
 	            		Toast.makeText(addnewone.this, "不能空白唷",Toast.LENGTH_SHORT).show();
-	            	}
-	            		else{
+	            	}else{
+	            		 if("".equals(Editor.getText().toString())){
+		            		Log.d("d","Editor Blank");
+		            	 Editor.setText("Anonymous");
+	            		 }
 	            			ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
 	    							"test");
 	            		System.out.println(TitleName); 
@@ -78,6 +81,7 @@ public class addnewone extends Activity {
 						query.orderByDescending("ClickNumber");
 						Toast.makeText(addnewone.this, "新增成功",Toast.LENGTH_SHORT).show();
 						FlurryAgent.logEvent("addnewoneFinish");
+						
 						   new Thread(new Runnable() {
 				               @Override
 				               public void run() {
