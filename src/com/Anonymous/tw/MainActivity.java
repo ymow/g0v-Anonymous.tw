@@ -310,7 +310,7 @@ public class MainActivity extends Activity {
 	        if ((keyCode == KeyEvent.KEYCODE_BACK)) {  
 //	            startActivity(new Intent(SingleItemView.this,
 //	                    MainActivity.class));
-	            finish();
+//	            finish();
 	            System.exit(0);
 //	            ConfirmExit();//按返回鍵，則執行退出確認
 	            return true;   
