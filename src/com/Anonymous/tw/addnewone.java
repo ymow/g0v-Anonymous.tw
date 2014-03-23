@@ -59,13 +59,17 @@ public class addnewone extends Activity {
 	          case R.id.menu_next:
 	        	 
        	         	
-	            	if("".equals(TitleName.getText().toString()) || "".equals(Content.getText().toString())){
+	            	if("".equals(Content.getText().toString())){
 	            		Log.d("d","不能空白");
 	            		Toast.makeText(addnewone.this, "不能空白唷",Toast.LENGTH_SHORT).show();
 	            	}else{
 	            		 if("".equals(Editor.getText().toString())){
 		            		Log.d("d","Editor Blank");
 		            	 Editor.setText("Anonymous");
+	            		 }else if("".equals(TitleName.getText().toString())){
+	            				Log.d("d","Title Blank");
+	            				TitleName.setText(Content.toString().indexOf(0,6)+"...");
+	            				
 	            		 }
 	            			ParseQuery<ParseObject> query = new ParseQuery<ParseObject>(
 	    							"test");

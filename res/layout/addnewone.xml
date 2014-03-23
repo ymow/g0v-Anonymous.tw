@@ -19,6 +19,7 @@
         android:layout_margin="10dip"
         android:layout_weight="0.06"
         android:hint="關於黑箱服務貿易"
+        android:text=""
         android:maxEms="16" />
 
     <TextView
